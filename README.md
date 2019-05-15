@@ -9,7 +9,7 @@ Use all actual React packeges
 
 #### TypeScript
 - `typescript`
-- `@types/node` `@types/react` `@types/react-dom` `@types/jest` `@type/react-router-dom`
+- `@types/node` `@types/react` `@types/react-dom` `@types/jest` `@type/react-router-dom` `@types/enzyme` 
 
 
 #### Test (_setupProxy.js_)

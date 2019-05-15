@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Welcome from './Welcome';
-import DealList from './DealList';
+import Welcome from './Welcome/Welcome';
+import DealList from './DealList/DealList';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
-import Environment from './Environment';
+import Environment from './Environment/Environment';
 
 const App = () => {
   return (
