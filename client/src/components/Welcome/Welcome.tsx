@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from '../img/logo.svg';
-import styles from './Welcome.module.scss';
+import * as React from 'react';
+import logo from '../../img/logo.svg';
+import * as styles from './Welcome.module.scss';
 
 const Welcome = () => {
   return (

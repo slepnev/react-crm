@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import styles from './DealList.module.scss';
+import * as React from 'react';
+import { useEffect, useState } from "react";
+import * as styles from './DealList.module.scss';
 
 const DealList = () => {
   const [deals, setDeals] = useState([]);
@@ -17,7 +18,7 @@ const DealList = () => {
   }, []);
 
   const renderList = () => {
-    return deals.length && deals.map(item => (
+    return deals.length && deals.map((item: any) => (
       <div key={item.id}>
         <b>{item.id}</b>
         <span>{item.title}</span>
