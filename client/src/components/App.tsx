@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Welcome from './Welcome/Welcome';
-import DealList from './DealList/DealList';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
-import Environment from './Environment/Environment';
+import { renderRoutes } from "react-router-config";
+import loadable from '@loadable/component';
+import { routes } from "../routes";
 
 const App = () => {
   return (
@@ -22,9 +22,7 @@ const App = () => {
 
         <hr />
 
-        <Route exact path="/" component={Welcome} />
-        <Route path="/deals" component={DealList} />
-        <Route path="/env" component={Environment} />
+        {renderRoutes(routes)}
       </div>
     </BrowserRouter>
   );
