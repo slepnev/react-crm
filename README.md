@@ -6,6 +6,8 @@ Use all actual React packeges
 
 #### React
 - `react-router-dom` - Router
+- `react-router-config` - Render routers from config
+- `@loadable/component` `@types/loadable__component` - Code splitting, lazy loading
 
 #### TypeScript
 - `typescript`
