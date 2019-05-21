@@ -1,28 +1,23 @@
 import * as React from 'react';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { renderRoutes } from "react-router-config";
-import loadable from '@loadable/component';
 import { routes } from "../routes";
+import Menu from "./Menu/Menu";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/deals">Deals</Link>
-          </li>
-          <li>
-            <Link to="/env">Environment</Link>
-          </li>
-        </ul>
+      <div className="row">
 
-        <hr />
+        <div className="col s2 grey lighten-4" style={{padding: 0, minHeight: '100vh'}}>
+          <a className="btn-floating pulse"><i className="material-icons">menu</i></a>
+        </div>
 
-        {renderRoutes(routes)}
+        <div className="col s10" style={{padding: 0}}>
+          <Menu />
+          {renderRoutes(routes)}
+        </div>
+
       </div>
     </BrowserRouter>
   );
