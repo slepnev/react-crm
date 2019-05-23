@@ -14,6 +14,9 @@ Use all actual React packeges
 - `@material-ui/icons` - SVG Icons Material design
 - `materialize-css@next` `@types/materialize-css` - CSS framework Materialize
 
+#### Utils
+- `classnames` `@types/classnames` - Бибилотека для работы с CSS классами
+
 
 #### TypeScript
 - `typescript`

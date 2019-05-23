@@ -9,9 +9,13 @@ const DealList = () => {
     document.title = 'Deal List';
 
     const fetchData = async () => {
-      const result = await fetch('/api/deals', {method: 'GET'})
-        .then(result => result.json());
-      setDeals(result);
+      try {
+        const result = await fetch('/api/deals', {method: 'GET'})
+          .then(result => result.json());
+        setDeals(result);
+      } catch (e) {
+        console.log(e);
+      }
     };
 
     fetchData();

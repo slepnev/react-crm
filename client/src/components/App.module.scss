@@ -1,0 +1,30 @@
+.container {
+  display: grid;
+  min-height: 100vh;
+
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+      "sidebar header"
+      "sidebar main"
+      "footer footer";
+  grid-gap: 0;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 0;
+}
+
+.main {
+  grid-area: main;
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
