@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.10.1",
+    "@types/classnames": "^2.2.7",
     "@types/enzyme": "^3.9.2",
     "@types/jest": "^24.0.13",
     "@types/loadable__component": "^5.9.0",
@@ -14,11 +15,13 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-router-config": "^1.1.3",
     "@types/react-router-dom": "^4.3.3",
+    "classnames": "^2.2.6",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.0",
     "http-proxy-middleware": "^0.19.1",
     "jest-dom": "^3.2.2",
     "jest-enzyme": "^7.0.2",
+    "jsdom-quokka-plugin": "^1.0.14",
     "materialize-css": "^1.0.0-rc.2",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
@@ -30,6 +33,8 @@
     "react-snapshot": "^1.3.0",
     "react-test-renderer": "^16.8.6",
     "react-testing-library": "^7.0.0",
+    "ts-node": "^8.1.0",
+    "tsconfig-paths": "^3.8.0",
     "typescript": "^3.4.5"
   },
   "devDependencies": {},
@@ -56,6 +61,15 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "quokka": {
+    "babel": true,
+    "ts": {
+      "path": "./node_modules/typescript"
+    },
+    "plugins": [
+      "jsdom-quokka-plugin"
     ]
   }
 }
