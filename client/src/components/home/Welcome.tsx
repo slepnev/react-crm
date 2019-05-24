@@ -1,5 +1,5 @@
 import * as React from 'react';
-import logo from '../../img/logo.svg';
+import logo from '../../assets/images/logo.svg';
 import * as styles from './Welcome.module.scss';
 
 const Welcome = () => {

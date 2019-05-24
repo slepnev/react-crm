@@ -7,21 +7,19 @@ Use all actual React packeges
 #### React
 - `react-router-dom` - Router
 - `react-router-config` - Render routers from config
-- `@loadable/component` `@types/loadable__component` - Code splitting, lazy loading
+- `@loadable/component` - Code splitting, lazy loading
 
 #### UI
-- `@material-ui/core` - UI lib Material design
-- `@material-ui/icons` - SVG Icons Material design
-- `materialize-css@next` `@types/materialize-css` - CSS framework Materialize
+- `styled-components` - CSS in JS
+- `materialize-css@next` - CSS framework Materialize
+- `@material-ui/core` `@material-ui/icons`  - UI lib Material design
 
 #### Utils
-- `classnames` `@types/classnames` - Бибилотека для работы с CSS классами
-
+- `classnames` - Бибилотека для работы с CSS классами
 
 #### TypeScript
 - `typescript`
-- `@types/node` `@types/react` `@types/react-dom` `@types/jest` `@type/react-router-dom` `@types/enzyme` 
-
+- `@types/node` `@types/react` `@types/react-dom` `@types/jest` `@types/react-router-dom` `@types/enzyme` `@types/loadable__component` `@types/materialize-css` `@types/classnames` `@types/styled-components`
 
 #### Test (_setupProxy.js_)
 - `enzyme` `enzyme-adapter-react-16` `react-test-renderer` `jest-enzyme` - Enzyme support test
