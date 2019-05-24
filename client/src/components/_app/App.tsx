@@ -2,11 +2,11 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
-import { routes } from '../routes';
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
-import Menu from './Menu/Menu';
-import Logo from './Logo/Logo';
+import { routes } from './routes';
+import Header from './Header';
+import Footer from './Footer';
+import Sidebar from './Sidebar';
+import Logo from './Logo';
 import M from 'materialize-css';
 import * as styles from './App.module.scss';
 import * as classNames from 'classnames/bind';
@@ -25,7 +25,7 @@ const App = () => {
 
         <aside className={cx({sidebar: true}, 'z-depth-2')}>
           <Logo />
-          <Menu />
+          <Sidebar />
         </aside>
 
         <header className={styles.header}>

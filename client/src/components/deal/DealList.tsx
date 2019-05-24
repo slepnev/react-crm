@@ -10,7 +10,7 @@ const DealList = () => {
 
     const fetchData = async () => {
       try {
-        const result = await fetch('/api/deals', {method: 'GET'})
+        const result = await fetch('/api/v1/deals', {method: 'GET'})
           .then(result => result.json());
         setDeals(result);
       } catch (e) {
