@@ -1,9 +1,9 @@
 import loadable from '@loadable/component';
 
-const Welcome = loadable(() => import(/* webpackPreload: true */ '../home/Welcome'));
-const DealList = loadable(() => import(/* webpackPreload: true */ '../deal/DealList'));
-const Environment = loadable(() => import(/* webpackPreload: true */ '../environment/Environment'));
-const Entities = loadable(() => import(/* webpackPreload: true */ '../entitie/Entities'));
+const Welcome = loadable(() => import(/* webpackPreload: true */ './../home/Welcome'));
+const DealList = loadable(() => import(/* webpackPreload: true */ './../deal/DealList'));
+const EntitieList = loadable(() => import(/* webpackPreload: true */ './../entitie/EntitieList'));
+const Environment = loadable(() => import(/* webpackPreload: true */ '../env/Environment'));
 
 // Environment.preload();
 // DealList.preload();
@@ -26,6 +26,6 @@ export const routes = [
   },
   {
     path: "/entities",
-    component: Entities,
+    component: EntitieList,
   }
 ];
