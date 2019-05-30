@@ -9,6 +9,9 @@ Use all actual React packeges
 - `react-router-config` - Render routers from config
 - `@loadable/component` - Code splitting, lazy loading
 
+#### State
+- `redux` `react-redux` - State manager, methodology Flax
+
 #### UI
 - `styled-components` - CSS in JS
 - `materialize-css@next` - CSS framework Materialize

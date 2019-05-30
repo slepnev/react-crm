@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Entities = () => {
+const EntitieList = () => {
   const [entities, setEntities] = useState([]);
 
   useEffect(() => {
@@ -20,14 +20,14 @@ const Entities = () => {
   }, []);
 
   const renderList = () => {
-    return entities.length && entities.map((item: any) => (
+    return entities.length ? entities.map((item: any) => (
       <tr key={item.id}>
         <td><b>{item.id}</b></td>
         <td>{item.title}</td>
         <td>{item.description}</td>
         <td/>
       </tr>
-    ));
+    )) : <tr/>;
   };
 
   return (
@@ -37,7 +37,7 @@ const Entities = () => {
           <th>Id</th>
           <th>Наименование</th>
           <th>Уточнения</th>
-          <th></th>
+          <th/>
         </tr>
       </thead>
       <tbody>
@@ -47,4 +47,4 @@ const Entities = () => {
   );
 };
 
-export default Entities;
+export default EntitieList;
