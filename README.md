@@ -34,3 +34,43 @@ Use all actual React packeges
 #### Pre-Rendering
 - `react-snapshot` - Создает статитечкую первоначальную версию сайта
 - `react-helmet` - Manages the document head, including title, description and meta tags
+
+###### Изучить
+- redux-devtools-extension
+- webpack custom build and dev
+- props type
+- redux thunk
+- redux-devtools-extension
+- redux observable and rxjs request for api
+- redux saga
+- redux rematch
+- redux reselect
+- redux persist
+- effector effector-react
+- mobx
+- css reshadow
+- css emotion
+- lib ramda
+- lib datejs
+- lib numeral
+- form redux form
+- form formik
+- form final form
+- l18n React Inti
+- Next.js
+- Gatsby
+- React Native
+- e2e Puppeteer
+- e2e Cypress
+- test Jest
+- test Enzyme
+- test Snapshots
+
+###### План разработки
+- Настроить redux и redux-devtools-extension
+- Список компаний через redux thunk
+- Создание компании через обычный запрос и final form
+- Удаление компании через обычный запрос
+- Создание компании через redux thunk и redux form
+- Удаление компании через redux thunk
+- ...
