@@ -1,9 +1,18 @@
 import loadable from '@loadable/component';
+import * as React from 'react';
+import pMinDelay from 'p-min-delay';
+import Preloader from '../_common/Preloader';
 
-const Welcome = loadable(() => import(/* webpackPreload: true */ './../home/Welcome'));
-const DealList = loadable(() => import(/* webpackPreload: true */ './../deal/DealList'));
-const EntitieList = loadable(() => import(/* webpackPreload: true */ './../entitie/EntitieList'));
-const Environment = loadable(() => import(/* webpackPreload: true */ '../env/Environment'));
+const FallbackPreload = { fallback: <Preloader/>};
+
+const Welcome = loadable(() => import(/* webpackPrefetch: true */ './../home/Welcome'), FallbackPreload);
+const DealList = loadable(() => import(/* webpackPrefetch: true */ './../deal/DealList'), FallbackPreload);
+const EntityList = loadable(() => import(/* webpackPrefetch: true */ '../entity/EntityList'), FallbackPreload);
+const EntityReduxThunkList = loadable(
+  () => pMinDelay(import(/* webpackPrefetch: true */ '../entity/EntityListReduxThunk'), 800),
+  FallbackPreload
+);
+const Environment = loadable(() => import(/* webpackPrefetch: true */ '../env/Environment'), FallbackPreload);
 
 // Environment.preload();
 // DealList.preload();
@@ -12,20 +21,24 @@ const Environment = loadable(() => import(/* webpackPreload: true */ '../env/Env
 
 export const routes = [
   {
-    path: "/",
+    path: '/',
     exact: true,
     component: Welcome
   },
   {
-    path: "/deals",
+    path: '/deals',
     component: DealList,
   },
   {
-    path: "/env",
+    path: '/env',
     component: Environment,
   },
   {
-    path: "/entities",
-    component: EntitieList,
+    path: '/entities',
+    component: EntityList,
+  },
+  {
+    path: '/entities-thunk',
+    component: EntityReduxThunkList,
   }
 ];

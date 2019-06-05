@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import { routes } from './routes';
-import Header from './Header';
-import Footer from './Footer';
-import Sidebar from './Sidebar';
-import Logo from './Logo';
+import Header from './header/Header';
+import Footer from './footer/Footer';
+import Sidebar from './sidebar/Sidebar';
+import Logo from './logo/Logo';
 import M from 'materialize-css';
 import * as styles from './App.module.scss';
 import * as classNames from 'classnames/bind';
@@ -33,7 +33,9 @@ const App = () => {
         </header>
 
         <main className={styles.main}>
-          {renderRoutes(routes)}
+          <React.Suspense fallback={<div>Loading...</div>}>
+            {renderRoutes(routes)}
+          </React.Suspense>
         </main>
 
         <footer className={styles.footer}>
