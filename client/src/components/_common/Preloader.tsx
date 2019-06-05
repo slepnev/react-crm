@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Preloader = () => {
+const Preloader: any = () => {
   return (
     <div className="progress">
-      <div className="indeterminate"></div>
+      <div className="indeterminate"/>
     </div>
   );
 };
