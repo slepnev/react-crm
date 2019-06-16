@@ -22,6 +22,7 @@ Use all actual React packeges
 #### Utils
 - `classnames` - Бибилотека для работы с CSS классами
 - `lodash` - Бибилотека для работы с данными
+- `redux-cli` - Code generator
 
 #### TypeScript
 - `typescript`
@@ -43,7 +44,6 @@ Use all actual React packeges
 - webpack custom build and dev
 - props type
 + redux thunk
-- redux-devtools-extension
 - redux observable and rxjs request for api
 - redux saga
 - redux rematch
@@ -70,6 +70,7 @@ Use all actual React packeges
 - test Enzyme
 - test Snapshots
 + React.memo
++ code-generation redux-cli
 ---
 ###### План разработки
 + Настроить redux и redux-devtools-extension
