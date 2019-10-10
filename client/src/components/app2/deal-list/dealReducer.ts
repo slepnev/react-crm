@@ -1,14 +1,14 @@
 import _ from 'lodash';
-import { Entity } from './entityInterface';
-import { CREATE_ENTITY, DELETE_ENTITY, EntityActionTypes, FETCH_ENTITIES, FETCH_ENTITY } from './entityActions';
+import { Deal } from '../../../interfaces/dealInterface';
+import { CREATE_ENTITY, DELETE_ENTITY, EntityActionTypes, FETCH_ENTITIES, FETCH_ENTITY } from './dealActions';
 
-export interface EntityState {
-  [key: string]: Entity
+export interface DealState {
+  [key: string]: Deal
 }
 
-const INITIAL_STATE: EntityState = {};
+const INITIAL_STATE: DealState = {};
 
-export default (state = INITIAL_STATE, action: EntityActionTypes): EntityState => {
+export default (state = INITIAL_STATE, action: EntityActionTypes): DealState => {
   switch (action.type) {
     case FETCH_ENTITIES:
       return {...state, ..._.mapKeys(action.payload, 'id')};

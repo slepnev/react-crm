@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import entityReducer, { EntityState } from '../entity/entityReducer';
+import dealReducer, { DealState } from '../app2/deal-list/dealReducer';
 
 export interface State {
-  entities: EntityState
+  deals: DealState
 }
 
 export default combineReducers<State>({
-  entities: entityReducer
+  deals: dealReducer
 });
