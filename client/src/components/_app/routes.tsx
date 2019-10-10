@@ -6,10 +6,9 @@ import Preloader from '../_common/Preloader';
 const FallbackPreload = { fallback: <Preloader/>};
 
 const Welcome = loadable(() => import(/* webpackPrefetch: true */ './../home/Welcome'), FallbackPreload);
-const DealList = loadable(() => import(/* webpackPrefetch: true */ './../deal/DealList'), FallbackPreload);
-const EntityList = loadable(() => import(/* webpackPrefetch: true */ '../entity/EntityList'), FallbackPreload);
-const EntityReduxThunkList = loadable(
-  () => pMinDelay(import(/* webpackPrefetch: true */ '../entity/EntityListReduxThunk'), 800),
+const App1DealList = loadable(() => import(/* webpackPrefetch: true */ '../app1/deal-list/DealList'), FallbackPreload);
+const App2DealList = loadable(
+  () => pMinDelay(import(/* webpackPrefetch: true */ '../app2/deal-list/DealList'), 800),
   FallbackPreload
 );
 const Environment = loadable(() => import(/* webpackPrefetch: true */ '../env/Environment'), FallbackPreload);
@@ -26,19 +25,15 @@ export const routes = [
     component: Welcome
   },
   {
-    path: '/deals',
-    component: DealList,
-  },
-  {
     path: '/env',
     component: Environment,
   },
   {
-    path: '/entities',
-    component: EntityList,
+    path: '/app1',
+    component: App1DealList,
   },
   {
-    path: '/entities-thunk',
-    component: EntityReduxThunkList,
+    path: '/app2',
+    component: App2DealList,
   }
 ];
