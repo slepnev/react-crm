@@ -1,6 +1,12 @@
 # react-crm
-React &amp; Redux\
+React example project \
 Use all actual React packeges
+
+#### Concept:
+- deal list
+- deal add
+- deal edit
+- deal delete
 
 ## Npm packeges
 
@@ -12,7 +18,8 @@ Use all actual React packeges
 #### State
 - `redux` `react-redux` - State manager, methodology Flax
 - `redux-devtools-extension` - Chrome Dev Tools for Redux
-- `redux-thunk` - Redux middleware for async dispatch. Function
+- `redux-cli` - Code generator
+- `redux-thunk` - [API] Redux middleware for async dispatch. Function
 
 #### UI
 - `styled-components` - CSS in JS
@@ -21,8 +28,8 @@ Use all actual React packeges
 
 #### Utils
 - `classnames` - Бибилотека для работы с CSS классами
+- `clsx` - Альтернатива `classnames`, но меньше и быстрее
 - `lodash` - Бибилотека для работы с данными
-- `redux-cli` - Code generator
 
 #### TypeScript
 - `typescript`
@@ -39,9 +46,8 @@ Use all actual React packeges
 - `react-snapshot` - Создает статитечкую первоначальную версию сайта
 - `react-helmet` - Manages the document head, including title, description and meta tags
 ---
-###### Изучить
+#### Изучить
 + redux-devtools-extension
-- webpack custom build and dev
 - props type
 + redux thunk
 - redux observable and rxjs request for api
@@ -53,10 +59,14 @@ Use all actual React packeges
 - mobx
 - css reshadow
 - css emotion
-- lib ramda
-- lib datejs
+- lib rambda
+- lib datejs (analog moment.js)
+- lib date-fns (analog moment.js)
 - lib numeral
 + lib lodash
+- lib clsx
+- styling eslint
+- styling Prettier
 - form redux form
 - form formik
 - form final form
@@ -64,19 +74,29 @@ Use all actual React packeges
 - Next.js
 - Gatsby
 - React Native
+- Apollo+GraphQL
+- api Axios
+- api Superagent
++ React.memo
++ code-generation redux-cli
+###### Сборка
+- Webpack (custom build and dev)
+- Parcel
+- Rollup
+###### Тестирование
 - e2e Puppeteer
 - e2e Cypress
 - test Jest
 - test Enzyme
 - test Snapshots
-+ React.memo
-+ code-generation redux-cli
 ---
-###### План разработки
+#### План разработки
 + Настроить redux и redux-devtools-extension
-+ Список компаний через redux thunk
-- Создание компании через обычный запрос и final form
-- Удаление компании через обычный запрос
-- Создание компании через redux thunk и redux form
-- Удаление компании через redux thunk
+- App2. Список сделок через redux thunk
+- App1. Создание сделки через обычный запрос и final form
+- App1. Редактирование сделки через обычный запрос и final form
+- App1. Удаление сделки через обычный запрос без подтверждение
+- App2. Создание сделки через redux thunk и redux form
+- App2. Редактирование сделки через redux thunk и redux form
+- App2. Удаление сделки через redux thunk
 - ...

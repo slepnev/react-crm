@@ -17,7 +17,7 @@ const Sidebar = () => {
         App2
         <MenuItemParams>
           <li>ReduxThunk</li>
-          <li>Styled-components]</li>
+          <li>Styled-components</li>
         </MenuItemParams>
       </Link>
     </MenuList>

@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
-import { DealState } from './dealReducer';
+import { DealListState } from './dealListReducer';
 
 type DealListView = {
-  deals: DealState,
+  deals: DealListState,
   [key: string]: any,
 }
 

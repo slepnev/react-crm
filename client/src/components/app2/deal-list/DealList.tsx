@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import DealListView from './DealListView';
 import { connect } from 'react-redux';
-import { fetchEntities } from './dealActions';
+import { fetchEntities } from './dealListActions';
 import { State } from '../../_app/reducers';
 
 const DealList = ({deals, fetchEntities}: any) => {
