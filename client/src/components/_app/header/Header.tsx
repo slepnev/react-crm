@@ -17,7 +17,6 @@ const Header = () => {
         <div className="nav-wrapper">
           <ul id="nav-mobile" className="left hide-on-med-and-down" ref={sidenav}>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/deals">Deals</Link></li>
             <li><Link to="/env">Environment</Link></li>
             <li><Dropdown /></li>
           </ul>

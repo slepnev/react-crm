@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
-import { Deal } from '../../../interfaces/dealInterface';
+import { DealItem } from '../../../interfaces/dealInterface';
 
 type DealListView = {
-  deals: Deal[],
+  deals: DealItem[],
   [key: string]: any,
 }
 
