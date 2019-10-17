@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import DealListView from './DealListView';
 import { connect } from 'react-redux';
-import { fetchEntities } from './dealListActions';
+import { fetchDealList } from './dealListActions';
 import { State } from '../../_app/reducers';
 
-const DealList = ({deals, fetchEntities}: any) => {
+const DealList = ({deals, fetchDealList}: any) => {
   useEffect(() => {
-    fetchEntities();
+    fetchDealList();
   }, []);
 
   return (
@@ -14,8 +14,8 @@ const DealList = ({deals, fetchEntities}: any) => {
   );
 };
 
-const mapStateToProps = ({deals}: State) => {
+const mapStateToProps = ({app2: {deals}}: State) => {
   return {deals};
 };
 
-export default connect(mapStateToProps, {fetchEntities})(DealList);
+export default connect(mapStateToProps, {fetchDealList})(DealList);

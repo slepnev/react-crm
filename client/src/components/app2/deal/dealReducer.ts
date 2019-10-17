@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { DealItem } from '../../../interfaces/dealInterface';
-import { CREATE_ENTITY, DELETE_DEAL, DealsActionTypes, FETCH_DEALS, FETCH_ENTITY } from './dealActions';
+import { DealsActionTypes, DELETE_DEAL, FETCH_DEALS } from './dealActions';
 
 export interface DealsState {
   [key: string]: DealItem

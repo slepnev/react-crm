@@ -30,6 +30,7 @@ Use all actual React packeges
 - `classnames` - Бибилотека для работы с CSS классами
 - `clsx` - Альтернатива `classnames`, но меньше и быстрее
 - `lodash` - Бибилотека для работы с данными
+- `p-min-delay` - Promise minimum delay
 
 #### TypeScript
 - `typescript`
@@ -64,6 +65,7 @@ Use all actual React packeges
 - lib date-fns (analog moment.js)
 - lib numeral
 + lib lodash
++ lib p-min-delay
 - lib clsx
 - styling eslint
 - styling Prettier
@@ -92,7 +94,7 @@ Use all actual React packeges
 ---
 #### План разработки
 + Настроить redux и redux-devtools-extension
-- App2. Список сделок через redux thunk
++ App2. Список сделок через redux thunk
 - App1. Создание сделки через обычный запрос и final form
 - App1. Редактирование сделки через обычный запрос и final form
 - App1. Удаление сделки через обычный запрос без подтверждение

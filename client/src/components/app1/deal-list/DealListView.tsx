@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react';
 import { DealItem } from '../../../interfaces/dealInterface';
 
-type DealListView = {
+type Props = {
   deals: DealItem[],
   [key: string]: any,
 }
 
-const DealListView: React.FC<any> = React.memo(({deals}: DealListView): ReactElement<any> => {
+const DealListView: React.FC<any> = React.memo(({deals}: Props): ReactElement<any> => {
   const renderList = () => {
     const dealsIds = Object.keys(deals || {});
 
@@ -15,7 +15,9 @@ const DealListView: React.FC<any> = React.memo(({deals}: DealListView): ReactEle
         <td><b>{deals[itemId].id}</b></td>
         <td>{deals[itemId].title}</td>
         <td>{deals[itemId].description}</td>
-        <td />
+        <td>
+
+        </td>
       </tr>
     )) : <tr />;
   };

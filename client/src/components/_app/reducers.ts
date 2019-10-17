@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import dealReducer, { DealListState } from '../app2/deal-list/dealListReducer';
+import app2Reducer, { App2State } from '../app2/reducers';
 
 export interface State {
-  deals: DealListState
+  app2: App2State
 }
 
 export default combineReducers<State>({
-  deals: dealReducer
+  app2: app2Reducer
 });
