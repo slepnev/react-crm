@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import * as styles from './DealList.module.scss';
 import DealListView from './DealListView';
-import _ from 'lodash';
+import mapKeys from 'lodash/mapKeys';
 
 const DealList = () => {
   const [deals, setDeals] = useState({});
+  console.log(styles);
 
   useEffect(() => {
     document.title = 'Deal List';
@@ -13,7 +14,7 @@ const DealList = () => {
       try {
         const result = await fetch('/api/v1/deals', {method: 'GET'})
           .then(result => result.json());
-        const dealMap = _.mapKeys(result, 'id');
+        const dealMap = mapKeys(result, 'id');
         setDeals(dealMap);
       } catch (e) {
         console.log(e);
@@ -24,7 +25,7 @@ const DealList = () => {
   }, []);
 
   return (
-    <div className={styles.dealListWrapper}>
+    <div className={styles['deal-list-wrapper']}>
       <DealListView deals={deals} />
     </div>
   );
