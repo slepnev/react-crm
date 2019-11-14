@@ -3,6 +3,7 @@ import DealListView from './DealListView';
 import { connect } from 'react-redux';
 import { fetchDealList } from './dealListActions';
 import { State } from '../../_app/reducers';
+import { DealListWrapper } from './dealListStyle';
 
 const DealList = ({deals, fetchDealList}: any) => {
   useEffect(() => {
@@ -10,7 +11,9 @@ const DealList = ({deals, fetchDealList}: any) => {
   }, []);
 
   return (
-    <DealListView deals={deals} />
+    <DealListWrapper center={true}>
+      <DealListView deals={deals} />
+    </DealListWrapper>
   );
 };
 

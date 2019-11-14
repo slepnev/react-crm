@@ -14,7 +14,6 @@ const App2DealList = loadable(
 const Environment = loadable(() => import(/* webpackPrefetch: true */ '../env/Environment'), FallbackPreload);
 
 // Environment.preload();
-// DealList.preload();
 // Welcome.preload();
 
 
