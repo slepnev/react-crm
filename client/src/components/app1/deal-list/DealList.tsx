@@ -5,7 +5,6 @@ import mapKeys from 'lodash/mapKeys';
 
 const DealList = () => {
   const [deals, setDeals] = useState({});
-  console.log(styles);
 
   useEffect(() => {
     document.title = 'Deal List';
@@ -24,9 +23,20 @@ const DealList = () => {
     fetchData();
   }, []);
 
+  const renderButtons = () => {
+    return (
+      <div className={styles['deal-list__buttons']}>
+        <a className="waves-effect waves-light btn"><i className="material-icons left">add</i>Добавить сделку</a>
+      </div>
+    );
+  };
+
   return (
-    <div className={styles['deal-list-wrapper']}>
-      <DealListView deals={deals} />
+    <div className={styles['deal-list']}>
+      {renderButtons()}
+      <div className={styles['deal-list__wrapper']}>
+        <DealListView deals={deals} />
+      </div>
     </div>
   );
 };

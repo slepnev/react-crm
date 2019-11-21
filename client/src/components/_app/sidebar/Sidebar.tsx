@@ -16,7 +16,7 @@ const Sidebar = () => {
       <Link className="collection-item waves-effect waves-light" to="/app2">
         App2
         <MenuItemParams>
-          <li>ReduxThunk</li>
+          <li>Redux / Thunk</li>
           <li>Styled-components</li>
         </MenuItemParams>
       </Link>

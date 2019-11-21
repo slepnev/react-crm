@@ -1,4 +1,12 @@
-.deal-list-wrapper {
-  text-align: center;
-  margin: 0 auto;
+.deal-list {
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__wrapper {
+    text-align: center;
+    margin: 0 auto;
+  }
 }
