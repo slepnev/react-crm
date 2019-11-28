@@ -46,7 +46,11 @@ Use all actual React packeges
 #### Pre-Rendering
 - `react-snapshot` - Создает статитечкую первоначальную версию сайта
 - `react-helmet` - Manages the document head, including title, description and meta tags
+
+#### Mono-repositories
+- `lerna` - Следит за изменениями всех проектов. Publishing. Запуск скриптов с одинаковым названием.
 ---
+
 #### Изучить
 + redux-devtools-extension
 - props type
@@ -72,6 +76,7 @@ Use all actual React packeges
 - form redux form
 - form formik
 - form final form
+- form react-jsonschema-form
 - l18n React Inti
 - Next.js
 - Gatsby
@@ -91,6 +96,10 @@ Use all actual React packeges
 - test Jest
 - test Enzyme
 - test Snapshots
+###### Npm managers
++ Lerna
+- Rush
+- NX
 ---
 #### План разработки
 + Настроить redux и redux-devtools-extension

@@ -1,0 +1,25 @@
+{
+  "name": "react-crm",
+  "version": "1.0.0",
+  "description": "React example project \\ Use all actual React packeges",
+  "scripts": {
+    "start": "lerna run start",
+    "bootstrap": "lerna bootstrap",
+    "changed": "lerna changed",
+    "diff": "lerna diff",
+    "ls": "lerna ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slepnev/react-crm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slepnev/react-crm/issues"
+  },
+  "homepage": "https://github.com/slepnev/react-crm#readme",
+  "devDependencies": {
+    "lerna": "^3.19.0"
+  }
+}
