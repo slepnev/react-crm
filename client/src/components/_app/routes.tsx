@@ -2,6 +2,7 @@ import loadable from '@loadable/component';
 import * as React from 'react';
 import pMinDelay from 'p-min-delay';
 import Preloader from '../_common/Preloader';
+import { app1Routes } from '../app1/routes';
 
 const FallbackPreload = { fallback: <Preloader/>};
 
@@ -29,7 +30,7 @@ export const routes = [
   },
   {
     path: '/app1',
-    component: App1DealList,
+    routes: app1Routes
   },
   {
     path: '/app2',

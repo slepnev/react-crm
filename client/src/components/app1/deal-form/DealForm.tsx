@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import * as styles from './DealForm.module.scss';
 import DealFormView from './DealFormView';
 
-const DealForm = () => {
+const DealForm = (props: any) => {
   const [deal, setDeal] = useState({});
 
   useEffect(() => {
+    console.log(props);
     document.title = 'Deal Form';
 
     const fetchData = async () => {
@@ -29,7 +30,7 @@ const DealForm = () => {
 
   return (
     <div className={styles['deal-form']}>
-      <DealFormView deal={deal} />
+      {/*<DealFormView deal={deal} />*/}
     </div>
   );
 };

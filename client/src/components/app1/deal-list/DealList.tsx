@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import * as styles from './DealList.module.scss';
 import DealListView from './DealListView';
 import mapKeys from 'lodash/mapKeys';
+import { Link } from 'react-router-dom';
+import { MenuItemParams, MenuList } from '../../_app/sidebar/sidebarStyled';
 
 const DealList = () => {
   const [deals, setDeals] = useState({});
@@ -26,7 +28,11 @@ const DealList = () => {
   const renderButtons = () => {
     return (
       <div className={styles['deal-list__buttons']}>
-        <a className="waves-effect waves-light btn"><i className="material-icons left">add</i>Добавить сделку</a>
+
+        <Link className="waves-effect waves-light btn" to="/app2/new">
+          <i className="material-icons left">add</i>Добавить сделку
+        </Link>
+
       </div>
     );
   };
