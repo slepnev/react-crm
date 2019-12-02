@@ -29,7 +29,7 @@ const DealList = () => {
     return (
       <div className={styles['deal-list__buttons']}>
 
-        <Link className="waves-effect waves-light btn" to="/app2/new">
+        <Link className="waves-effect waves-light btn" to="/app1/new">
           <i className="material-icons left">add</i>Добавить сделку
         </Link>
 

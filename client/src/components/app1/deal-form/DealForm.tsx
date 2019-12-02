@@ -1,13 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import * as styles from './DealForm.module.scss';
-import DealFormView from './DealFormView';
+
+enum Type {
+  Edit = 'edit',
+  Create = 'create',
+}
 
 const DealForm = (props: any) => {
   const [deal, setDeal] = useState({});
+  const [type, setType] = useState();
 
   useEffect(() => {
     console.log(props);
-    document.title = 'Deal Form';
+
+    setType(props.match.params && props.match.params.id ? Type.Edit : Type.Create);
+
+    if (type === Type.Edit) {
+      document.title = 'Deal Edit';
+    } else {
+      document.title = 'Deal Create';
+    }
 
     const fetchData = async () => {
       try {
@@ -22,6 +34,12 @@ const DealForm = (props: any) => {
     fetchData();
   }, []);
 
+  function renderCaption() {
+    return type === Type.Edit
+      ? 'Редактирование сделки'
+      : 'Создание сделки';
+  }
+
   const createDeal = () => {
   };
 
@@ -30,6 +48,7 @@ const DealForm = (props: any) => {
 
   return (
     <div className={styles['deal-form']}>
+      <h4>{renderCaption()}</h4>
       {/*<DealFormView deal={deal} />*/}
     </div>
   );
