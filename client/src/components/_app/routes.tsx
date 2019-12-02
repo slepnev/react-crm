@@ -7,12 +7,13 @@ import { app1Routes } from '../app1/routes';
 const FallbackPreload = { fallback: <Preloader/>};
 
 const Welcome = loadable(() => import(/* webpackPrefetch: true */ './../home/Welcome'), FallbackPreload);
-const App1DealList = loadable(() => import(/* webpackPrefetch: true */ '../app1/deal-list/DealList'), FallbackPreload);
+const Environment = loadable(() => import(/* webpackPrefetch: true */ '../env/Environment'), FallbackPreload);
+const App1 = loadable(() => import(/* webpackPrefetch: true */ '../app1/App1'), FallbackPreload);
 const App2DealList = loadable(
   () => pMinDelay(import(/* webpackPrefetch: true */ '../app2/deal-list/DealList'), 800),
   FallbackPreload
 );
-const Environment = loadable(() => import(/* webpackPrefetch: true */ '../env/Environment'), FallbackPreload);
+
 
 // Environment.preload();
 // Welcome.preload();
@@ -30,6 +31,7 @@ export const routes = [
   },
   {
     path: '/app1',
+    component: App1,
     routes: app1Routes
   },
   {
