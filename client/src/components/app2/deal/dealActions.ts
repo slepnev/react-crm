@@ -1,4 +1,4 @@
-import { DealItem } from '../../../interfaces/dealInterface';
+import { Deal } from '../../../interfaces/dealInterface';
 
 export const FETCH_DEALS = 'FETCH_ENTITIES';
 export const FETCH_ENTITY = 'FETCH_ENTITY';
@@ -7,12 +7,12 @@ export const CREATE_ENTITY = 'CREATE_ENTITY';
 
 interface FetchEntitiesAction {
   type: typeof FETCH_DEALS
-  payload: DealItem[]
+  payload: Deal[]
 }
 
 interface FetchEntityAction {
   type: typeof FETCH_ENTITY
-  payload: DealItem
+  payload: Deal
 }
 
 interface DeleteEntityAction {
@@ -22,17 +22,17 @@ interface DeleteEntityAction {
 
 interface CreateEntityAction {
   type: typeof CREATE_ENTITY
-  payload: DealItem
+  payload: Deal
 }
 
-export function fetchEntitiesAction(entities: DealItem[]): FetchEntitiesAction {
+export function fetchEntitiesAction(entities: Deal[]): FetchEntitiesAction {
   return {
     type: FETCH_DEALS,
     payload: entities
   };
 }
 
-export function fetchEntityAction(entitiy: DealItem): FetchEntityAction {
+export function fetchEntityAction(entitiy: Deal): FetchEntityAction {
   return {
     type: FETCH_ENTITY,
     payload: entitiy
@@ -46,7 +46,7 @@ export function deleteEntityAction(entitiyId: string): DeleteEntityAction {
   };
 }
 
-export function createEntityAction(entitiy: DealItem): CreateEntityAction {
+export function createEntityAction(entitiy: Deal): CreateEntityAction {
   return {
     type: CREATE_ENTITY,
     payload: entitiy

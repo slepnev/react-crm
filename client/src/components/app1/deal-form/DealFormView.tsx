@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
-import { DealItem } from '../../../interfaces/dealInterface';
+import { Deal } from '../../../interfaces/dealInterface';
 
 type Props = {
-  deals: DealItem[],
+  deals: Deal[],
   [key: string]: any,
 }
 

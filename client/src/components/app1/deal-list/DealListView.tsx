@@ -1,8 +1,10 @@
 import React, { ReactElement } from 'react';
-import { DealItem } from '../../../interfaces/dealInterface';
+import { Deal } from '../../../interfaces/dealInterface';
+import { Link } from 'react-router-dom';
+import * as styles from './DealList.module.scss';
 
 type Props = {
-  deals: DealItem[],
+  deals: Deal[],
   [key: string]: any,
 }
 
@@ -15,8 +17,10 @@ const DealListView: React.FC<any> = React.memo(({deals}: Props): ReactElement<an
         <td><b>{deals[itemId].id}</b></td>
         <td>{deals[itemId].title}</td>
         <td>{deals[itemId].description}</td>
-        <td>
-
+        <td className={styles['deal-list__edit']}>
+          <Link className="waves-effect waves-light btn" to={`/app1/edit/${deals[itemId].id}`}>
+            <i className="material-icons left">edit</i>Редактировать
+          </Link>
         </td>
       </tr>
     )) : <tr />;

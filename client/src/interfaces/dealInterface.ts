@@ -1,4 +1,4 @@
-export interface DealItem {
+export interface Deal {
   id: any,
   title: any,
   description: any,

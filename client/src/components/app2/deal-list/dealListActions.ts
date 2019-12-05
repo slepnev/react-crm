@@ -1,11 +1,11 @@
-import { DealItem } from '../../../interfaces/dealInterface';
+import { Deal } from '../../../interfaces/dealInterface';
 
 export const FETCH_DEAL_LIST = '[app2] FETCH_DEAL_LIST';
 export const DELETE_DEAL_ITEM = '[app2] DELETE_DEAL_ITEM';
 
 interface FetchDealListAction {
   type: typeof FETCH_DEAL_LIST
-  payload: DealItem[]
+  payload: Deal[]
 }
 
 interface DeleteDealItemAction {
@@ -13,7 +13,7 @@ interface DeleteDealItemAction {
   payload: string
 }
 
-export function fetchDealListAction(entities: DealItem[]): FetchDealListAction {
+export function fetchDealListAction(entities: Deal[]): FetchDealListAction {
   return {
     type: FETCH_DEAL_LIST,
     payload: entities
