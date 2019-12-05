@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { ClassAttributes, Props, PropsWithRef, useEffect, useState } from 'react';
 import * as styles from './DealForm.module.scss';
+import { Deal } from '../../../interfaces/dealInterface';
 
 enum Type {
   Edit = 'edit',
@@ -7,23 +8,20 @@ enum Type {
 }
 
 const DealForm = (props: any) => {
-  const [deal, setDeal] = useState({});
-  const [type, setType] = useState();
+  const [id, setId] = useState<string | null>();
+  const [deal, setDeal] = useState<Deal>();
+  const [type, setType] = useState<Type>();
 
   useEffect(() => {
     console.log(props);
 
-    setType(props.match.params && props.match.params.id ? Type.Edit : Type.Create);
-
-    if (type === Type.Edit) {
-      document.title = 'Deal Edit';
-    } else {
-      document.title = 'Deal Create';
-    }
+    setId((props.match.params && props.match.params.id) || null);
+    console.log(id);
+    setType(id ? Type.Edit : Type.Create);
 
     const fetchData = async () => {
       try {
-        const result = await fetch('/api/v1/deals', {method: 'GET'})
+        const result = await fetch('/api/v1/deals/' + id, {method: 'GET'})
           .then(result => result.json());
         setDeal(result);
       } catch (e) {
@@ -31,7 +29,13 @@ const DealForm = (props: any) => {
       }
     };
 
-    fetchData();
+    if (type === Type.Edit) {
+      document.title = 'Deal Edit';
+
+      fetchData();
+    } else {
+      document.title = 'Deal Create';
+    }
   }, []);
 
   function renderCaption() {

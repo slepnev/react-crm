@@ -1,9 +1,9 @@
 import _ from 'lodash';
-import { DealItem } from '../../../interfaces/dealInterface';
+import { Deal } from '../../../interfaces/dealInterface';
 import { DealsActionTypes, DELETE_DEAL_ITEM, FETCH_DEAL_LIST } from './dealListActions';
 
 export interface DealListState {
-  [key: string]: DealItem
+  [key: string]: Deal
 }
 
 const INITIAL_STATE: DealListState = {};

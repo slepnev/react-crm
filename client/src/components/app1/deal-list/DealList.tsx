@@ -3,7 +3,6 @@ import * as styles from './DealList.module.scss';
 import DealListView from './DealListView';
 import mapKeys from 'lodash/mapKeys';
 import { Link } from 'react-router-dom';
-import { MenuItemParams, MenuList } from '../../_app/sidebar/sidebarStyled';
 
 const DealList = () => {
   const [deals, setDeals] = useState({});
