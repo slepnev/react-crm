@@ -1,6 +1,6 @@
 # react-crm
 React example project \
-Use all actual React packeges
+Use all actual React packages
 
 #### Concept:
 - deal list
@@ -62,6 +62,7 @@ Use all actual React packeges
 - redux persist
 - effector effector-react
 - mobx
+- React.Context
 - css reshadow
 - css emotion
 - lib rambda
